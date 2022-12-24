@@ -19,16 +19,16 @@ export class AlunoController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.alunoService.findOne(+id);
+    return this.alunoService.findOne(id);
   }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateAlunoDto: UpdateAlunoDto) {
-    return this.alunoService.update(+id, updateAlunoDto);
+    return this.alunoService.update(id, updateAlunoDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.alunoService.remove(+id);
+    return this.alunoService.remove(id);
   }
 }

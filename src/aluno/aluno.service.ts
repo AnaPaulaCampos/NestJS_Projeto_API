@@ -21,7 +21,7 @@ export class AlunoService {
   }
 
   findOne(id: string): Promise<Aluno> {
-    return this.repository.findOne(id);
+    return this.repository.findOne({ where: { id } });
   }
 
   async update(id: string, updateAlunoDto: UpdateAlunoDto): Promise<Aluno> {
